@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333; 
+}
+
+#game-area {
+    width: 400px;
+    height: 600px;
+    background-color: skyblue;
+    border: 3px solid black;
+    position: relative; 
+    overflow: hidden; 
+}
+
+#bird {
+    width: 50px;
+    height: 50px;
+    position: absolute; 
+    left: 50px;
+}
+
+#birdImage{
+    width: 100%;
+    height: 100%;
+}
+
+.ground{
+    background-color: chocolate;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.pipe {
+    position: absolute;
+    top: 0;
+    left: 300px; 
+    width: 60px;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.pipe-top, .pipe-bottom {
+    width: 100%;
+    background-color: #3ff48a; 
+    border: 2px solid white;
+
+}
+
+.pipe-top {
+    height: 190px; 
+}
+
+.pipe-bottom {
+    height: 190px; 
+}
+
+#game-over-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: sans-serif;
+
+    display: none; 
+}
+
+#game-over-overlay.visible {
+    display: flex;
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 2px solid white;
+    background-color: #df9c00;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#score-display {
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 100; 
+}
+
+#game-over-overlay p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
